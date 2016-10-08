@@ -1,26 +1,42 @@
 require([
   "esri/Map",
   "esri/views/MapView",
+  "esri/WebMap",
   //"esri/widgets/BasemapToggle",
   "dojo/domReady!"
 ], function(
   Map,
-  MapView//,
+  MapView,
+  WebMap//,
   //BasemapToggle
 ) {
 
-  // Create the Map with an initial basemap
-  var map = new Map({
-    basemap: "topo"
-  });
+  var webmap = new WebMap({
+        portalItem: { // autocasts as new PortalItem()
+          id: "f2e9b762544945f390ca4ac3671cfa72"
+        }
+      });
 
-   // Create the MapView and reference the Map in the instance
-  var view = new MapView({
-    container: "viewDiv",
-    map: map,
-    center: [-86.049, 38.485],
-    zoom: 3
-  });
+   /************************************************************
+       * Set the WebMap instance to the map property in a MapView.
+       ************************************************************/
+      var view = new MapView({
+        map: webmap,
+        container: "viewDiv"
+      });
+
+  // // Create the Map with an initial basemap
+  // var map = new Map({
+  //   basemap: "topo"
+  // });
+
+  //  // Create the MapView and reference the Map in the instance
+  // var view = new MapView({
+  //   container: "viewDiv",
+  //   map: map,
+  //   center: [-86.049, 38.485],
+  //   zoom: 3
+  // });
 
 });
 
