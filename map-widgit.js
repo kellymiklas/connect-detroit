@@ -24,14 +24,11 @@ require([
 
 });
 
-// 1 - Create the widget
-var toggle = new BasemapToggle({
-  // 2 - Set properties
-  view: view, // view that provides access to the map's 'topo' basemap
-  nextBasemap: "hybrid" // allows for toggling to the 'hybrid' basemap
+var basemapToggle = new BasemapToggle({
+  view: view,  // The view that provides access to the map's "streets" basemap
+  nextBasemap: "hybrid"  // Allows for toggling to the "hybrid" basemap
 });
-
-toggle.startup(); // 3 - Call startup on the widget
+basemapToggle.startup();// 3 - Call startup on the widget
 
 // Add the BasemapToggle widget to the top right corner of the view
-view.ui.add(toggle, "top-right");
+view.ui.add(basemapToggle, "top-right");
