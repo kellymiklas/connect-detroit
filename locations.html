@@ -9,24 +9,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
+<link rel="stylesheet" type="text/css" href=style.css>
+
 <script src="https://js.arcgis.com/3.18/"></script>
-
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-
-#mapDiv
-{
-
-  margin: 10%;
-  box-shadow: 10px 10px 50px #000000;
-  width: 80%;
-  height: 75%;
-}
-
-</style>
-
 </head>
 
 <body>
@@ -65,8 +50,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       require(["esri/map", "dojo/domReady!"], function(Map) {
         map = new Map("mapDiv", {
           basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
-          center: [-83.0458, 42.3314], // longitude, latitude
-          zoom: 13
+          center: [-83.0458, 42.3314], // longitude, latitude – DETROIT
+          zoom: 12
         });
       });
     </script>
