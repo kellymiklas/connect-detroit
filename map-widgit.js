@@ -1,12 +1,12 @@
 require([
   "esri/Map",
   "esri/views/MapView",
-  "esri/widgets/BasemapToggle",
+  //"esri/widgets/BasemapToggle",
   "dojo/domReady!"
 ], function(
   Map,
-  MapView,
-  BasemapToggle
+  MapView//,
+  //BasemapToggle
 ) {
 
   // Create the Map with an initial basemap
@@ -24,11 +24,11 @@ require([
 
 });
 
-var basemapToggle = new BasemapToggle({
-  view: view,  // The view that provides access to the map's "streets" basemap
-  nextBasemap: "hybrid"  // Allows for toggling to the "hybrid" basemap
-});
-basemapToggle.startup();// 3 - Call startup on the widget
+// var basemapToggle = new BasemapToggle({
+//   view: view,  // The view that provides access to the map's "streets" basemap
+//   nextBasemap: "hybrid"  // Allows for toggling to the "hybrid" basemap
+// });
+// basemapToggle.startup();// 3 - Call startup on the widget
 
-// Add the BasemapToggle widget to the top right corner of the view
-view.ui.add(basemapToggle, "top-right");
+// // Add the BasemapToggle widget to the top right corner of the view
+// view.ui.add(basemapToggle, "top-right");
