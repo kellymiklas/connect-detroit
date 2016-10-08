@@ -56,9 +56,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-blue w3-center w3-padding-128">
   
+<link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
+<script src="https://js.arcgis.com/3.18/"></script>
+<script>
+      var map;
+
+      require(["esri/map", "dojo/domReady!"], function(Map) {
+        map = new Map("mapDiv", {
+          basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
+          center: [-122.45, 37.75], // longitude, latitude
+          zoom: 13
+        });
+      });
+    </script>
+
     <!-- Map Widgit -->
-    <div id="viewDiv">
-      <script src="map-widgit.js"></script>
+    <div id="mapDiv">
     </div>
 
 </header>
