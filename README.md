@@ -1,2 +1,4 @@
 # connect-detroit
-In the city of Detroit, 4 in 10 people lack access to the internet. Largely due to money problems, the cost of internet is far too high for low-income families to justify paying an internet bill when they're already struggling to pay for rent, utilities, and food.
+In the city of Detroit, 4 in 10 people lack access to the internet. Largely due to money problems, the cost of internet is far too high for low-income families to justify paying an internet bill when they're already struggling to pay for rent, utilities, and food. 
+The goal of this web app is to assist in connecting more of Detroit's citizens of the internet so they are able to apply for jobs, pursue higher education, and, in general, have access to the same opportunities that connection to the internet presents for other Americans. 
+The gap of connectivitiy in Detroit won't be solved by one web app, but my hope is that by crowd-sourcing used hardware (routers, modems, ethernet cables, etc) will get Detroiters one step closer to the opportunities they are currently being denied. 
