@@ -1,10 +1,12 @@
 require([
   "esri/Map",
   "esri/views/MapView",
+  "esri/widgets/BasemapToggle",
   "dojo/domReady!"
 ], function(
   Map,
-  MapView
+  MapView,
+  BasemapToggle
 ) {
 
   // Create the Map with an initial basemap
