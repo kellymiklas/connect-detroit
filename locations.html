@@ -140,18 +140,19 @@
           }
         });
       //var sms = new esri.symbol.SimpleMarkerSymbol();
-
+      var count = 0;
       customerData.forEach(function(customerObject, index, array) {
         $.get('http://api.reimaginebanking.com/customers/' + customerObject.customer + '?key=' + apiKey).done(function(data) {
           $.get('https:maps.googleapis.com/maps/api/geocode/json?address=' + data.address.street_number + '+' + data.address.street_name.replace(' ', '+') + ', +' + data.address.city + ', +' + data.address.state + '&key=AIzaSyD_4IDazPxtL9BoJ-RF-frbedJCatR4qUU').done(function(data){
             console.log(data.results[0].geometry.location.lat);
             console.log(data.results[0].geometry.location.lng);
             var loc = new esri.geometry.Point(data.results[0].geometry.location.lng, data.results[0].geometry.location.lat);
-            if (customerData.Comcast == 'N') 
+            if (customerObject.Comcast == 'N') 
             {
+              console.log(++count);
               map.graphics.add(new esri.Graphic(loc, symbol, data.results[0].formatted_address));
             }
-            
+            //map.graphics.add(new esri.Graphic(loc, symbol, data.results[0].formatted_address));
           });
         });
       });
