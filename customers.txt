@@ -1,0 +1,170 @@
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Erik",
+   "last_name": "Thornton",
+   "address": {
+     "street_number": "63",
+     "street_name": "Temple St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48207"
+   },
+   "_id": "57f992c9360f81f104543c07"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Elena",
+   "last_name": "Grant",
+   "address": {
+     "street_number": "1480",
+     "street_name": "Woodbridge St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48207"
+   },
+   "_id": "57f992c9360f81f104543c08"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Karl",
+   "last_name": "Frazier",
+   "address": {
+     "street_number": "2924",
+     "street_name": "Van Dyke St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48214"
+   },
+   "_id": "57f992c9360f81f104543c09"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Hope",
+   "last_name": "James",
+   "address": {
+     "street_number": "2154",
+     "street_name": "Scott St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48207"
+   },
+   "_id": "57f992c9360f81f104543c0a"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Jack",
+   "last_name": "Allison",
+   "address": {
+     "street_number": "1249",
+     "street_name": "West Lafayette Boulevard",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48226"
+   },
+   "_id": "57f992c9360f81f104543c0b"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Tara",
+   "last_name": "Copeland",
+   "address": {
+     "street_number": "1422",
+     "street_name": "Crane St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48214"
+   },
+   "_id": "57f992c9360f81f104543c0c"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Joan",
+   "last_name": "Gregory",
+   "address": {
+     "street_number": "2344",
+     "street_name": "Junction St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48209"
+   },
+   "_id": "57f992c9360f81f104543c0d"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Kelli",
+   "last_name": "Murray",
+   "address": {
+     "street_number": "67",
+     "street_name": "Sproat St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48201"
+   },
+   "_id": "57f992c9360f81f104543c0f"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Shari",
+   "last_name": "Schneider",
+   "address": {
+     "street_number": "3920",
+     "street_name": "Rivard St.",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48207"
+   },
+   "_id": "57f992c9360f81f104543c10"
+ }
+}
+201
+body: {
+ "code": 201,
+ "message": "Customer created",
+ "objectCreated": {
+   "first_name": "Kenny",
+   "last_name": "Watson",
+   "address": {
+     "street_number": "3416",
+     "street_name": "Elmwood St",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48207"
+   },
+   "_id": "57f992c9360f81f104543c0e"
+ }
+}
