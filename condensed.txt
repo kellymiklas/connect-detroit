@@ -1,0 +1,59 @@
+1)
+customer: 57f992c9360f81f104543c07
+account: 57f99aee360f81f104543c11
+#bills: 5
+Comcast?: Y
+
+2)
+customer: 57f992c9360f81f104543c08
+account: 57f99c0c360f81f104543c17
+#bills: 5
+Comcast?: Y
+
+3)
+customer: 57f992c9360f81f104543c09
+account: 57f99c72360f81f104543c1d
+#bills: 2
+Comcast?: N
+
+4)
+customer: 57f992c9360f81f104543c0a
+account: 57f99cbe360f81f104543c20
+#bills: 2
+Comcast?: Y
+
+5)
+customer: 57f992c9360f81f104543c0b
+account: 57f99d32360f81f104543c23
+#bills: 4
+Comcast?: Y
+
+6)
+customer: 57f992c9360f81f104543c0c
+account: 57f99d89360f81f104543c28
+#bills: 2
+Comcast?: N
+
+7)
+customer: 57f992c9360f81f104543c0d
+account: 57f99dcc360f81f104543c2b
+#bills: 2
+Comcast?: N
+
+8)
+customer: 57f992c9360f81f104543c0f
+account: 57f99dfb360f81f104543c2e
+#bills: 4
+Comcast?: N
+
+9)
+customer: 57f992c9360f81f104543c10
+account: 57f99eab360f81f104543c33
+#bills: 3
+Comcast?: Y
+
+10)
+customer: 57f992c9360f81f104543c0e
+account: 57f99f01360f81f104543c37
+#bills: 2
+Comcast?: N
