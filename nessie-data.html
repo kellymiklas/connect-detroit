@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Get Them Points Boi</title>
+</head>
+
+<body>
+<h1> We'll see if I can get this to work lmfao </h1>
+
+  	<h3>Retrieving a Customer</h3>
+  	<div id="getCustomer"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  	<script type="text/javascript">
+  	var apiKey = '772ee0859fcf9079669d1863f2ec9352';
+
+  	var customerData = [
+  	{
+	customer: '57f992c9360f81f104543c07',
+	account: '57f99aee360f81f104543c11',
+	bills: 5,
+	Comcast: 'Y'
+	},
+	{
+	customer: '57f992c9360f81f104543c08',
+	account: '57f99c0c360f81f104543c17',
+	bills: 5,
+	Comcast: 'Y'
+	},
+	{
+	customer: '57f992c9360f81f104543c09',
+	account: '57f99c72360f81f104543c1d',
+	bills: 2,
+	Comcast: 'N'
+	},
+	{
+	customer: '57f992c9360f81f104543c0a',
+	account: '57f99cbe360f81f104543c20',
+	bills: 2,
+	Comcast: 'Y'
+	},
+	{
+	customer: '57f992c9360f81f104543c0b',
+	account: '57f99d32360f81f104543c23',
+	bills: 4,
+	Comcast: 'Y'
+	},
+	{
+	customer: '57f992c9360f81f104543c0c',
+	account: '57f99d89360f81f104543c28',
+	bills: 2,
+	Comcast: 'N'
+	},
+	{
+	customer: '57f992c9360f81f104543c0d',
+	account: '57f99dcc360f81f104543c2b',
+	bills: 2,
+	Comcast: 'N'
+	},
+	{
+	customer: '57f992c9360f81f104543c0f',
+	account: '57f99dfb360f81f104543c2e',
+	bills: 4,
+	Comcast: 'N'
+	},
+	{
+	customer: '57f992c9360f81f104543c10',
+	account: '57f99eab360f81f104543c33',
+	bills: 3,
+	Comcast: 'Y'
+	},
+	{
+	customer: '57f992c9360f81f104543c0e',
+	account: '57f99f01360f81f104543c37',
+	bills: 2,
+	Comcast: 'N'
+	}
+  	]
+
+  	customerData.forEach(function(customerObject, index, array) {
+	  	$.get('http://api.reimaginebanking.com/customers/' + customerObject.customer + '?key=' + apiKey).done(function(data) {
+	  		console.log('data: ' + JSON.stringify(data, null, 2));
+	  		console.log(JSON.stringify(data.address, null, 2));
+	  		console.log(data.address.street_number);
+	  	});
+  	});
+
+  	// array of detroit customers?
+  	//var det_customers = {
+  	//	det_id: '',
+  	//	det_acct: '',
+  	//	internet: false; // true of comcast detected
+  	//};
+  	//var fs = require('fs');
+	//var array = fs.readFileSync('condensed.txt').toString().split("\n");
+	//for(var i = 0; i < (array.length / 5); ++i) {
+		// array[i] just contains #
+		// customer id
+		// account id
+		// num bills
+		// comcast?
+	//}
+
+
+  	// function getCustomer (key, cust) {
+   //    var allCustomers = cust.getCustomers();
+
+      // loop through all customers and log their info
+      // console.log("[Customer - Get All Customers]");
+      // for (var i = 0; i < allCustomers.length; i++) {
+      // 	var id = allCustomers[i]._id;
+      // 	var acct = allCustomers[i].account_ids;
+
+      // 	//if () {}
+
+
+
+      //   var firstName = allCustomers[i].first_name;
+      //   var lastName = allCustomers[i].last_name;
+      //   console.log("Customer[" + i + "]: " + firstName + " " + lastName);
+      //   // take note of the customer we created
+      //   if(firstName == customerFirstName && lastName == customerLastName) {
+      //     myCustomer = allCustomers[i];
+      //   }
+      // }
+
+</script>
+
+</body>
+
+
+</html>

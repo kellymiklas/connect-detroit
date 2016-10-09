@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css">
 <link rel="stylesheet" type="text/css" href=style.css>
 
-<!--<script data-main="nessie-javascript-sdk/lib/capital_one" src="nessie-javascript-sdk/lib/require-jquery.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="https://js.arcgis.com/3.18/"></script> 
 
 </head>
@@ -46,18 +46,114 @@
 <header class="w3-container w3-blue w3-center w3-padding-128">
 
 <script>
-  var map;
-      require(["esri/map", 
-               "dojo/domReady!"], 
-      function(Map) 
+  // Nessie api stuff //
+
+  var apiKey = '772ee0859fcf9079669d1863f2ec9352';
+
+    var customerData = [
+    {
+    customer: '57f992c9360f81f104543c07',
+    account: '57f99aee360f81f104543c11',
+    bills: 5,
+    Comcast: 'Y'
+    },
+    {
+    customer: '57f992c9360f81f104543c08',
+    account: '57f99c0c360f81f104543c17',
+    bills: 5,
+    Comcast: 'Y'
+    },
+    {
+    customer: '57f992c9360f81f104543c09',
+    account: '57f99c72360f81f104543c1d',
+    bills: 2,
+    Comcast: 'N'
+    },
+    {
+    customer: '57f992c9360f81f104543c0a',
+    account: '57f99cbe360f81f104543c20',
+    bills: 2,
+    Comcast: 'Y'
+    },
+    {
+    customer: '57f992c9360f81f104543c0b',
+    account: '57f99d32360f81f104543c23',
+    bills: 4,
+    Comcast: 'Y'
+    },
+    {
+    customer: '57f992c9360f81f104543c0c',
+    account: '57f99d89360f81f104543c28',
+    bills: 2,
+    Comcast: 'N'
+    },
+    {
+    customer: '57f992c9360f81f104543c0d',
+    account: '57f99dcc360f81f104543c2b',
+    bills: 2,
+    Comcast: 'N'
+    },
+    {
+    customer: '57f992c9360f81f104543c0f',
+    account: '57f99dfb360f81f104543c2e',
+    bills: 4,
+    Comcast: 'N'
+    },
+    {
+    customer: '57f992c9360f81f104543c10',
+    account: '57f99eab360f81f104543c33',
+    bills: 3,
+    Comcast: 'Y'
+    },
+    {
+    customer: '57f992c9360f81f104543c0e',
+    account: '57f99f01360f81f104543c37',
+    bills: 2,
+    Comcast: 'N'
+    }
+    ]
+
+    var map;
+    require(["esri/map", 
+    "dojo/domReady!"],  function(Map) 
+    {
+      map = new Map("mapDiv", 
       {
-        map = new Map("mapDiv", 
-        {
-          basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
-          center: [-83.0458, 42.3314], // longitude, latitude – DETROIT
-          zoom: 12
+        basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
+        center: [-83.0458, 42.3314], // longitude, latitude – DETROIT
+        zoom: 12
+      });
+
+      var symbol = new esri.symbol.SimpleMarkerSymbol({
+          "color": [255,255,255,64],
+          "size": 12,
+          "angle": -30,
+          "xoffset": 0,
+          "yoffset": 0,
+          "type": "esriSMS",
+          "style": "esriSMSCross",
+          "outline": {
+            "color": [0,0,0,255],
+            "width": 1,
+            "type": "esriSLS",
+            "style": "esriSLSSolid"
+          }
+        });
+      //var sms = new esri.symbol.SimpleMarkerSymbol();
+
+      customerData.forEach(function(customerObject, index, array) {
+        $.get('http://api.reimaginebanking.com/customers/' + customerObject.customer + '?key=' + apiKey).done(function(data) {
+          $.get('https:maps.googleapis.com/maps/api/geocode/json?address=' + data.address.street_number + '+' + data.address.street_name.replace(' ', '+') + ', +' + data.address.city + ', +' + data.address.state + '&key=AIzaSyD_4IDazPxtL9BoJ-RF-frbedJCatR4qUU').done(function(data){
+            console.log(data.results[0].geometry.location.lat);
+            console.log(data.results[0].geometry.location.lng);
+            var loc = new esri.geometry.Point(data.results[0].geometry.location.lng, data.results[0].geometry.location.lat);
+            
+            map.graphics.add(new esri.Graphic(loc, symbol, data.results[0].formatted_address));
+          });
         });
       });
+  });
+  // --- //
 </script>
 
     <!-- Map Widgit -->
