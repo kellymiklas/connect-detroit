@@ -147,8 +147,11 @@
             console.log(data.results[0].geometry.location.lat);
             console.log(data.results[0].geometry.location.lng);
             var loc = new esri.geometry.Point(data.results[0].geometry.location.lng, data.results[0].geometry.location.lat);
+            if (customerData.Comcast == 'N') 
+            {
+              map.graphics.add(new esri.Graphic(loc, symbol, data.results[0].formatted_address));
+            }
             
-            map.graphics.add(new esri.Graphic(loc, symbol, data.results[0].formatted_address));
           });
         });
       });
